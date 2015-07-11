@@ -5,7 +5,7 @@ angular.module('sif')
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
 			.state('home', {
-				url: '/', 
+				url: '/',
 				templateUrl: '/views/home/index.html'
 			})
 			.state('authentication', {
@@ -18,15 +18,14 @@ angular.module('sif')
 			})
 			.state('profile', {
 				url: '/profile',
-				templateUrl: '/views/profile.html',
-				abstract: true
+				templateUrl: '/views/profile.html'
 			})
-			.state('profile.myCards', {
-				url: '/profile/myCards',
+			.state('myCards', {
+				url: '/myCards',
 				templateUrl: '/views/myCards.html'
 			})
-			.state('profile.settings', {
-				url: '/profile/settings',
+			.state('settings', {
+				url: '/settings',
 				templateUrl: '/views/settings.html'
 			})
 			.state('addCard', {
