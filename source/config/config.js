@@ -5,7 +5,7 @@ angular.module('sif')
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
 			.state('home', {
-				url: '/',
+				url: '/', 
 				templateUrl: '/views/home/index.html'
 			})
 			.state('authentication', {
