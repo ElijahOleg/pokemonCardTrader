@@ -1,0 +1,31 @@
+{
+  "name": "sif",
+  "version": "0.0.1",
+  "authors": [
+    "Chris Oyler <christopher.oyler@gmail.com>"
+  ],
+  "description": "Bower Dependencies for Sif",
+  "keywords": [
+    "Angular",
+    "Jade",
+    "SASS"
+  ],
+  "license": "MIT",
+  "homepage": "github.com/IAmEddieDean/Sif",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.1",
+    "angular-ui-router": "0.2.15",
+    "angularfire": "1.1.2",
+    "firebase": "2.2.7",
+    "bootstrap": "3.3.5",
+    "lodash": "3.10.0",
+    "jquery": "2.1.4"
+  }
+}
