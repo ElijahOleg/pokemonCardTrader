@@ -24,7 +24,7 @@ var gulp =        require('gulp'),
       htmlsrc: ['./public/**/*.html'],
       sasssrc: ['./source/**/*.scss'],
       codesrc: ['./source/**/*.js'],
-      assetssrc: ['./assets/**/*.*'],
+      assetssrc: ['./source/**/**/*.*'],
       mediasrc: ['./source/media/**/*', './source/favicon.ico'],
       destination: './public',
       temp: './temp',
@@ -37,7 +37,7 @@ gulp.task('default', function(cb){
   run('build', 'serve', 'watch', cb);
 });
 gulp.task('build', ['clean:public', 'clean:temp'], function(cb){
-  run('bower', 'jade', 'build-js', 'build-css', 'copy', cb);
+  run('bower', 'assets', 'jade', 'build-js', 'build-css', 'copy', cb);
 });
 //refresh tasks
 gulp.task('refresh', function(cb){
@@ -87,6 +87,12 @@ gulp.task('jade', function(){
   return gulp.src(paths.jadesrc)
   .pipe(plumber())
   .pipe(jade({pretty: true, doctype: 'html', locals: {isProd: isProd}}))
+  .pipe(gulp.dest(paths.destination))
+  .on('error', gutil.log);
+});
+gulp.task('assets', function(){
+  return gulp.src(paths.assetssrc)
+  .pipe(plumber())
   .pipe(gulp.dest(paths.destination))
   .on('error', gutil.log);
 });
